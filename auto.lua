@@ -1,4 +1,5 @@
-buffer_number = 20 
+buffer_number = vim.api.nvim_get_current_buf()
+
 vim.api.nvim_create_autocmd("BufWritePost", {
 	group = vim.api.nvim_create_augroup("evaluate", { clear = true }),
 	pattern = "source.lua",
